@@ -1,6 +1,7 @@
 <template>
-    <button class="g-button" :class="{[`icon-${iconposition}`]: true}">
+    <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
       <g-icon v-if="icon" :name="icon"></g-icon>
+      <g-icon class="loading" name="loading"></g-icon>
       <div class="content">
         <slot></slot>
       </div>
@@ -10,7 +11,7 @@
   export default{
     props:{
       icon:{},
-      iconposition:{
+      iconPosition:{
         type: String,
         default:'left',
         validator(value){
@@ -24,6 +25,11 @@
   }
 </script>
 <style lang="scss">
+  @keyframes load{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+  }
+
   .g-button{
     font-size: var(--button-bg);
     background: var(--button-bg);
@@ -40,6 +46,10 @@
      > .content{order:1;}
    }
   }
+  .loading{
+    animation: load 1s infinite linear;
+  }
+
  /* .g-button:hover{*/
  /*     background: var(--border-color-hover);*/
  /* }*/
