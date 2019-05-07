@@ -34,31 +34,28 @@
     100%{transform: rotate(360deg);}
   }
   .g-button{
-    font-size: var(--button-bg);
-    background: var(--button-bg);
+    font-size: var(--font-size);
     border-radius: var(--button-border-radius);
     height: var(--button-height);
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
-  > .icon{order:2;}
-  >.content{order: 1;}
-  .g-button.icon-right{
-     > .icon{order: 2;}
-     > .content{order:1;}
-   }
-  }
-  .loading{
-    animation: load 1s infinite linear;
-  }
-
- /* .g-button:hover{*/
- /*     background: var(--border-color-hover);*/
- /* }*/
- /*. g-button:active{*/
- /*     background: var(--button-active-bg);*/
- /*     color: var(--button-active-color);*/
- /* }*/
- /* .g-button:focus{outline: none;}*/
+    > .icon{order:2;}
+    >.content{order: 1;}
+    .g-button.icon-right{
+       > .icon{order: 2;}
+       > .content{order:1;}
+    }
+    .loading{
+      animation: load 1s infinite linear;
+    }
+    &:hover{
+      background: var(--border-color-hover);
+    }
+    &:active{
+      background: var(--button-active-bg);
+      color: var(--button-active-color);
+    }
+    &:focus{outline: none;}
+    }
   </style>

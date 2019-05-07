@@ -10,7 +10,6 @@
     :root{
       --button-height: 2em;
       --font-size: 16px;
-      --button-bg: #ddd;
       --button-active-bg: #000;
       --button-active-color: #ffffff;
       --button-border-radius: 4px;
@@ -18,8 +17,7 @@
     }
     .icon{ width: 1em; height: 1em;background: #000;}
     .g-button:focus{outline: none;}
-    .g-button{
-      vertical-align: middle;}
+    .g-button{vertical-align: middle;}
   </style>
 </head>
 <body>
@@ -30,13 +28,17 @@
   <g-button icon="setting" :loading="loading2" @click="loading2 = !loading2">
     按钮2
   </g-button>
-  <g-button icon="setting" iconposition="left" :loading="loading3" @click="loading3 = !loading3">
+  <g-button icon="setting" iconposition="right" :loading="loading3" @click="loading3 = !loading3">
     按钮3
   </g-button>
   <g-icon name="download"></g-icon>
+  <g-button-group>
+    <g-button icon="left">上一页</g-button>
+    <g-button>更多</g-button>
+    <g-button icon="right">下一页</g-button>
+  </g-button-group>
 </div>
-<script src="//at.alicdn.com/t/font_1176732_zixq3k17bq.js"></script>
-
+<script src="//at.alicdn.com/t/font_1176732_odh1pyrixy.js"></script>
 <script src="./src/app.js"></script>
 </body>
 </html>
