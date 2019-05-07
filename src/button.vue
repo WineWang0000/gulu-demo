@@ -40,8 +40,8 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    > .icon{order:2;}
-    >.content{order: 1;}
+    > .icon{order:1;}
+    >.content{order: 2;}
     .g-button.icon-right{
        > .icon{order: 2;}
        > .content{order:1;}
